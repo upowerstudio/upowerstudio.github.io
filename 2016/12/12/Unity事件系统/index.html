@@ -84,15 +84,28 @@
 
 
 
-<meta name="description" content="UpPower工作室技术博客">
-<meta property="og:type" content="website">
+<meta name="description" content="#Unity 事件系统
+##说明Unity事件系统主要负责将基于输入的事件发送给对象，无论是键盘、鼠标、触摸或自定义输入。事件系统由发送事件的几个组件共同组成：
+
+EventSystem组件：主要负责处理输入、射线投射以及发送事件。一个场景中只能有一个EventSystem组件，并且需要BaseInputModule组件的协助才能工作。
+BaseInputModule组件：是一个基础模块，负责发送">
+<meta property="og:type" content="article">
 <meta property="og:title" content="UpPower Studio">
-<meta property="og:url" content="https://github.com/upowerstudio/upowerstudio.github.io/archives/index.html">
+<meta property="og:url" content="https://github.com/upowerstudio/upowerstudio.github.io/2016/12/12/Unity事件系统/index.html">
 <meta property="og:site_name" content="UpPower Studio">
-<meta property="og:description" content="UpPower工作室技术博客">
+<meta property="og:description" content="#Unity 事件系统
+##说明Unity事件系统主要负责将基于输入的事件发送给对象，无论是键盘、鼠标、触摸或自定义输入。事件系统由发送事件的几个组件共同组成：
+
+EventSystem组件：主要负责处理输入、射线投射以及发送事件。一个场景中只能有一个EventSystem组件，并且需要BaseInputModule组件的协助才能工作。
+BaseInputModule组件：是一个基础模块，负责发送">
+<meta property="og:updated_time" content="2016-12-12T05:25:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UpPower Studio">
-<meta name="twitter:description" content="UpPower工作室技术博客">
+<meta name="twitter:description" content="#Unity 事件系统
+##说明Unity事件系统主要负责将基于输入的事件发送给对象，无论是键盘、鼠标、触摸或自定义输入。事件系统由发送事件的几个组件共同组成：
+
+EventSystem组件：主要负责处理输入、射线投射以及发送事件。一个场景中只能有一个EventSystem组件，并且需要BaseInputModule组件的协助才能工作。
+BaseInputModule组件：是一个基础模块，负责发送">
 
 
 
@@ -120,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/upowerstudio/upowerstudio.github.io/archives/"/>
+  <link rel="canonical" href="https://github.com/upowerstudio/upowerstudio.github.io/2016/12/12/Unity事件系统/"/>
 
 
 
 
 
-  <title> Archive | UpPower Studio </title>
+  <title>  | UpPower Studio </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
@@ -147,7 +160,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -227,66 +240,147 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      Um..! 1 post. Keep on posting.
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
-      
-      
+  
 
-      
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://github.com/upowerstudio/upowerstudio.github.io/2016/12/12/Unity事件系统/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="uppower">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="UpPower Studio">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="UpPower Studio" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-12T13:25:16+08:00">
+                2016-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
         </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <p>#Unity 事件系统</p>
+<p>##说明<br>Unity事件系统主要负责将基于输入的事件发送给对象，无论是键盘、鼠标、触摸或自定义输入。事件系统由发送事件的几个组件共同组成：</p>
+<ul>
+<li><strong>EventSystem组件：</strong>主要负责处理输入、射线投射以及发送事件。一个场景中只能有一个EventSystem组件，并且需要BaseInputModule组件的协助才能工作。</li>
+<li><strong>BaseInputModule组件：</strong>是一个基础模块，负责发送输入事件（点击、拖拽、选择等）到具体对象。StandaloneInputModule和TouchInputModule继承自BaseInputModule，分别负责标准输入和触摸输入。我们可以通过继承BaseInputModule来实现自己的输入模块，然后插入到EventSytem中。</li>
+<li><strong>BaseRaycaster组件：</strong>它通过射线投射来确定Input作用的目标对象。系统中PhysicsRaycaster、Physics2DRaycaster、GraphicRaycaster都继承自BaseRaycaster来确定对象。 Graphic Raycaster用于UI元素，Physics 2D Raycaster用于2D物理元素，Physics Raycaster用于3D物理元素。</li>
+</ul>
+<p>总的来说，EventSystem负责管理，BaseInputModule负责输入，BaseRaycaster负责确定目标对象，目标对象负责接收事件并处理，这样一个完整的事件系统就有了。详见：</p>
+<ol>
+<li><a href="http://manew.com/thread-45593-1-1.html" target="_blank" rel="external">官方文档翻译</a>   </li>
+<li><a href="http://www.manew.com/blog-56596-2917.html" target="_blank" rel="external">博客解释</a></li>
+</ol>
+<p>##使用<br><a href="http://www.cnblogs.com/zou90512/p/3995932.html" target="_blank" rel="external">EventSystem使用</a><br><a href="http://www.manew.com/thread-95704-1-1.html" target="_blank" rel="external">UnityEvent使用</a></p>
+<p>##原理</p>
+<p>###Event System流程<br><a href="http://www.manew.com/thread-95755-1-1.html" target="_blank" rel="external">EventSystem组件参数说明</a></p>
+<ol>
+<li>使用者输入(滑鼠、触摸、键盘)</li>
+<li>透过 Event System Manager 决定使用 Standalone 还是 Touch Input Module</li>
+<li>决定使用的 Input Module 后，透过 Scene 中的 Raycasters 计算哪个元素被点中</li>
+<li>传送Event<br>射线检测其实就是指定位置与方向后，投射一条隐形线并判断是否有碰撞体在线上，射线检测这点官方已经有详细说明，这裡用于判断是否点选到UI图形</li>
+</ol>
+<p>##自定义</p>
+<p>##波及到的类<br>EventSytem, BaseInputModule, BaseRaycaster, EventTrigger, EventTriggerType, TriggerEvent, UnityAction, BaseEventData, UnityEvent</p>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+    </div>
 
-      <h1 class="post-title">
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/12/12/Unity事件系统/" itemprop="url">
-              
-                <span itemprop="name">Untitled</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-12-12T13:25:16+08:00"
-              content="2016-12-12" >
-          12-12
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -294,6 +388,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -451,11 +549,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   

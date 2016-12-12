@@ -239,7 +239,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://github.com/upowerstudio/upowerstudio.github.io/2016/11/20/hello-world/">
+  <link itemprop="mainEntityOfPage" href="https://github.com/upowerstudio/upowerstudio.github.io/2016/12/12/Unity事件系统/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="uppower">
@@ -264,8 +264,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/11/20/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/2016/12/12/Unity事件系统/" itemprop="url">
+                  Untitled
                 </a>
               
             
@@ -279,8 +279,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-20T09:28:50+08:00">
-                2016-11-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-12T13:25:16+08:00">
+                2016-12-12
               </time>
             
 
@@ -317,15 +317,29 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <p>#Unity 事件系统</p>
+<p>##说明<br>Unity事件系统主要负责将基于输入的事件发送给对象，无论是键盘、鼠标、触摸或自定义输入。事件系统由发送事件的几个组件共同组成：</p>
+<ul>
+<li><strong>EventSystem组件：</strong>主要负责处理输入、射线投射以及发送事件。一个场景中只能有一个EventSystem组件，并且需要BaseInputModule组件的协助才能工作。</li>
+<li><strong>BaseInputModule组件：</strong>是一个基础模块，负责发送输入事件（点击、拖拽、选择等）到具体对象。StandaloneInputModule和TouchInputModule继承自BaseInputModule，分别负责标准输入和触摸输入。我们可以通过继承BaseInputModule来实现自己的输入模块，然后插入到EventSytem中。</li>
+<li><strong>BaseRaycaster组件：</strong>它通过射线投射来确定Input作用的目标对象。系统中PhysicsRaycaster、Physics2DRaycaster、GraphicRaycaster都继承自BaseRaycaster来确定对象。 Graphic Raycaster用于UI元素，Physics 2D Raycaster用于2D物理元素，Physics Raycaster用于3D物理元素。</li>
+</ul>
+<p>总的来说，EventSystem负责管理，BaseInputModule负责输入，BaseRaycaster负责确定目标对象，目标对象负责接收事件并处理，这样一个完整的事件系统就有了。详见：</p>
+<ol>
+<li><a href="http://manew.com/thread-45593-1-1.html" target="_blank" rel="external">官方文档翻译</a>   </li>
+<li><a href="http://www.manew.com/blog-56596-2917.html" target="_blank" rel="external">博客解释</a></li>
+</ol>
+<p>##使用<br><a href="http://www.cnblogs.com/zou90512/p/3995932.html" target="_blank" rel="external">EventSystem使用</a><br><a href="http://www.manew.com/thread-95704-1-1.html" target="_blank" rel="external">UnityEvent使用</a></p>
+<p>##原理</p>
+<p>###Event System流程<br><a href="http://www.manew.com/thread-95755-1-1.html" target="_blank" rel="external">EventSystem组件参数说明</a></p>
+<ol>
+<li>使用者输入(滑鼠、触摸、键盘)</li>
+<li>透过 Event System Manager 决定使用 Standalone 还是 Touch Input Module</li>
+<li>决定使用的 Input Module 后，透过 Scene 中的 Raycasters 计算哪个元素被点中</li>
+<li>传送Event<br>射线检测其实就是指定位置与方向后，投射一条隐形线并判断是否有碰撞体在线上，射线检测这点官方已经有详细说明，这裡用于判断是否点选到UI图形</li>
+</ol>
+<p>##自定义</p>
+<p>##波及到的类<br>EventSytem, BaseInputModule, BaseRaycaster, EventTrigger, EventTriggerType, TriggerEvent, UnityAction, BaseEventData, UnityEvent</p>
 
           
         
